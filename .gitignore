@@ -1,0 +1,10 @@
+__pycache__
+.Rhistory
+*.swp
+.Rproj.user
+/.vs
+/venv
+python/env
+/env
+/.env
+*.ipynb_checkpoints
