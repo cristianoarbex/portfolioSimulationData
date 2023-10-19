@@ -16,5 +16,18 @@ The market data used in the paper is located in the folder `assetUniverse/`. The
    - **LOTSIZE**: Default lot size for that asset.
    - **TAGS**: Asset categories, multiple categories are separated by "-" (hyphen).
 
-      
+ ```
+   Example of how DATES1 and DATES2 work:
+
+     CODE,...,DATES1,DATES2,...
+     A1,...,,,...
+     A2,...,20100101,20200101,...
+     A3,...,20170202,20120403,...
+     A4,...,20170202-20230801,20210101,...
+
+   Asset A1 was already part of the index from 01/01/2005, and it is still in the index.
+   Asset A2 was added to the index in 01/01/2010 and removed in 01/01/2020.
+   Asset A3 was already part of the index in 01/01/2005, it was then removed in 03/04/2012 and added again in 02/02/2017.
+   Finally, asset A4 was added to the index in 02/02/2017, removed in 01/01/2021 and added again on 01/08/2023.
+ ```
  -  
