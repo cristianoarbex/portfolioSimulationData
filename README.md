@@ -32,4 +32,6 @@ The market data used in the paper is located in the folder `assetUniverse/`. The
  ```
  -  `riskFreeRate.csv`: Risk free rate time series, with annualised returns. The series is the US 10-year treasury (ticker ^TNX on Yahoo finance).
 
+ -  `rollover/`: Individual csv files with rollover dates for each derivative. Dates are in format YYYY-MM-DD.
+
  -  `SP500_marketData.csv` (zipped): A csv file containing prices for the S&P500 and every asset in `assets.csv`. We use the **CODE** as asset identifier (column names in the csv). A missing price means that the price did not exist at the time. A negative price means that the asset was not part of the S&P500 at the time. All prices for futures contracts are the front-month rolled series.
