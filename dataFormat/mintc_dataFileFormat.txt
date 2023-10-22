@@ -1,0 +1,32 @@
+<N: Number of assets>
+<P: portfolio mark-to-market value>
+<wc: desired proportion in cash>
+
+<N2: Number of margin assets>
+
+<Indices of assets in N2, if N2 > 0>
+
+<Nr: Number of assets that need rollover>
+
+<Indices of assets in Nr, if Nr > 0>
+
+<Li: Leverage levels of each asset in N2, if N2 > 0>
+
+<fi: Fractional costs for trading each asset in N>
+
+<Vi: Current price for each asset in N>
+
+<Xi: Current number of shares held in each asset in N>
+
+<wi: Desired proportion to be invested in each asset in N>
+
+<li: Lot sizes for each asset in N, if lot sizes are employed>
+
+<N1-: Number of assets in N1 for which we hold shorting positions, if rent costs are employed>
+
+for i in 1 : N1-:
+   < asset i in N1- > <Ji: Number of individual contracts of asset i>
+   for j in 1 : Ji:
+      <h_i^j> <X_i^j>
+   # end for
+# end for
