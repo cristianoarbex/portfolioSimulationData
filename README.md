@@ -40,4 +40,10 @@ The market data used in the paper is located in the folder `assetUniverse/`. The
 
 The folder `dataFormat/` contains the following file:
 
-  - `mintc_dataFileFormat.txt`: Input file format for the second-stage formulation.
+  - `secondStage_dataFileFormat.txt`: Input file format for the second-stage formulation. The file includes the simulated date the execution took place. Some are necessary due to portfolio rebalances, some just to execute a futures contract rollover.
+
+## Data files
+
+The following folders contain the data files required to run the second stage models in every experiment in the paper:
+
+ - `section6.2`:
