@@ -4,7 +4,7 @@ This repository contains all data used to produce the results in the following p
 
 ## Market data
 
-The market data used in the paper is located in the folder `assetUniverse/`. The experiments in the paper range from 25/12/2012 until 01/09/2023. The folder contains the following files:
+The market data used in the paper is located in the folder `assetUniverse/`. The experiments in the paper range from 25/12/2012 until 29/12/2023. The folder contains the following files:
 
  - `assets.csv`: A csv file containing the list of assets that were part of the S&P500 index during (at least part of) this period, as well as selected derivatives. The file contains the following columns:
    - **CODE**: Asset unique identifier
@@ -34,7 +34,7 @@ The market data used in the paper is located in the folder `assetUniverse/`. The
 
  -  `rollover/`: Individual csv files with rollover dates for each derivative. Dates are in format YYYY-MM-DD.
 
- -  `SP500_marketData.csv` (zipped): A csv file containing prices for the S&P500 and every asset in `assets.csv`. We use the **CODE** as asset identifier (column names in the csv). A missing price means that the price did not exist at the time. A negative price means that the asset was not part of the S&P500 at the time. All prices for futures contracts are the front-month rolled series.
+ -  `SP500_marketData.csv` (zipped): A csv file containing prices for the S&P500 and every asset in `assets.csv`. We use the **CODE** as asset identifier (column names in the csv). A missing price means that the price did not exist at the time. A negative price means that the asset was not part of the S&P500 at the time. All prices for futures contracts are the front-month rolled series. The data comprises 09/03/2012 until 29/12/2023, so including the first in-sample period (initial 200 days) and the full out-of-sample period.
 
 ## Data format for the second stage
 
