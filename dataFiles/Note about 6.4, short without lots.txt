@@ -1,7 +1,7 @@
 
 Upon further examination of the output log files, one can see that the sum of
 the Hij variables is sometimes smaller than the real borrowing costs as
-calcualted "by hand".
+calculated "by hand".
 
 While this is theoretically impossible, CPLEX has a tolerance of 1e-5 to
 decide whether a variable if integer or not, and these inaccuracies are a
