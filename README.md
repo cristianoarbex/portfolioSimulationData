@@ -44,4 +44,13 @@ The folder `dataFormat/` contains the following file:
 
 ## Data files
 
-The folder `dataFiles/` contains the data files required to run all of the second stage models described in the paper. Note that we do not include the first stage models, but the (desired) weights chosen at the first stage are part of the second stage data file. Once again, for each experiment, some data files are due to portfolio rebalances, some are required in order to execute a futures contract rollover. All files for each experiment are in a corresponding zipped file of the format`.tar.gz`. The experiment to which it refers should be clear from the context.
+The folder `dataFiles/` contains the data files required to run all of the second stage models described in the paper. Note that we do not include the first stage models, but the (desired) weights chosen at the first stage are part of the second stage data file. Once again, for each experiment, some data files are due to portfolio rebalances, some are required in order to execute a futures contract rollover. All files for each experiment are in a corresponding zipped file of the format`.tar.gz`. The experiment to which it refers should be clear from the context. The main data files are:
+
+ - Section 6.2, case study, four zipped files:
+     - long_oddLots.tar.gz
+     - long_roundLots.tar.gz
+     - short_oddLots.tar.gz
+     - short_roundLots.tar.gz
+   Each of these files contains 264 data files. 132 of those are due to rebalances, 132 due to rollover dates.
+
+ -   
