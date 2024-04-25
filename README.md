@@ -52,6 +52,11 @@ The folder `dataFiles/` contains the data files required to run all of the secon
      - short_oddLots.tar.gz
      - short_roundLots.tar.gz
 
-   Each of these files contains 264 data files. 132 of those are due to rebalances, 132 due to rollover dates.
+   Each of these files contains 264 or 265 data files. 132 of those are due to rebalances, the remaining are due to rollover dates.
 
- -   
+ - Section 6.3, computational time. There are twenty zipped files, each one containing all data files for each of the 20 expeirments reported in this section.
+
+   Here, rollover was disabled, so there are 132 data files per experiment (one for each rebalance).
+
+   There is also a subfolder called `outputFiles`, with 20 zipped files containing the solutions found in the second stage.
+ - 
