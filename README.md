@@ -51,6 +51,7 @@ The folder `dataFiles/` contains the data files required to run all of the secon
      - long_roundLots.tar.gz
      - short_oddLots.tar.gz
      - short_roundLots.tar.gz
+
    Each of these files contains 264 data files. 132 of those are due to rebalances, 132 due to rollover dates.
 
  -   
