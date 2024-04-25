@@ -1,0 +1,23 @@
+
+Upon further examination of the output log files, one can see that the sum of
+the Hij variables is sometimes smaller than the real borrowing costs as
+calculated "by hand".
+
+While this is theoretically impossible, CPLEX has a tolerance of 1e-5 to
+decide whether a variable is integer or not, and these inaccuracies are a
+result of this tolerance. 
+
+It is possible to reduce the tolerance to 1e-9, for instance. While this
+sometimes solves the issue, in other times CPLEX reports status 115:
+
+CPXMIP_OPTIMAL_INFEAS 115
+Problem is optimal with unscaled infeasibilities
+
+Even with a more strict tolerance, this problem sometimes still happens. This
+is much more common in the model with borrowing costs and no lots then in the
+model with both borrowing costs and lots.
+
+Whenever the difference is negative, in the paper we artificially set them to
+zero in order to proceed with the calculations (this very rarely also happened
+in a much smaller scale in some experiments of Section 6.5).
+
