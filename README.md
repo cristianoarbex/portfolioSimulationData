@@ -1,6 +1,8 @@
-# Data for the paper <TODO put title here>
+### Data and appendices
 
-This repository contains all data used to produce the results in the following paper:
+This repository contains the appendix and all data used to produce the results in the following paper:
+
+`Portfolio optimisation: bridging the gap between theory and practice`
 
 ## Market data
 
