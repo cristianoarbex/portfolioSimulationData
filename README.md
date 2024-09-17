@@ -1,8 +1,12 @@
 ### Data and appendices
 
-This repository contains the appendix and all data used to produce the results in the following paper:
+This repository contains the appendix, as well as all data used to produce the results in the following paper:
 
 `Portfolio optimisation: bridging the gap between theory and practice`
+
+This repository was updated on **17 September 2024** to be inline with the new version of the paper, recently resubmitted.
+
+**It has not yet been resubmitted to ArXiv, I will update it here as soon as it is done.**
 
 ## Market data
 
@@ -44,31 +48,36 @@ The folder `dataFormat/` contains the following file:
 
   - `secondStage_dataFileFormat.txt`: Input file format for the second-stage formulation. The file includes the simulated date the execution took place. Some are necessary due to portfolio rebalances, some just to execute a futures contract rollover.
 
+## `.lp` files
+
+The folder `lpFiles` contains, as its name suggests, `.lp` files that can be run directly into any LP solver. These files are the ones used in Section 3.1 to solve the Woodside model. By running them, one can verify the numerical issues that happened with the Woodside formulation.
+
+
 ## Data files
 
-The folder `dataFiles/` contains the data files required to run all of the second stage models described in the paper. Note that we do not include the first stage models, but the (desired) weights chosen at the first stage are part of the second stage data file. Once again, for each experiment, some data files are due to portfolio rebalances, some are required in order to execute a futures contract rollover. All files for each experiment are in a corresponding zipped file of the format`.tar.gz`. The experiment to which it refers should be clear from the context. The main data files are:
+The folder `dataFiles/` contains the data files required to run all of the second stage models described in the paper. Note that we do not include the first stage models, but the (desired) weights chosen in the first stage are part of the second stage data file. Once again, for each experiment, some data files are due to portfolio rebalances, some are required in order to execute a futures contract rollover. All files for each experiment are in a corresponding zipped file of the format`.tar.gz`. The experiment to which it refers should be clear from the context. The main data files are:
 
- - Section 6.2, case study, four zipped files:
-     - `section6.2_long_oddLots.tar.gz`
-     - `section6.2_long_roundLots.tar.gz`
-     - `section6.2_short_oddLots.tar.gz`
-     - `section6.2_short_roundLots.tar.gz`
+ - Section 8.1, case study, four zipped files:
+     - `caseStudy_long_oddLots.tar.gz`
+     - `caseStudy_long_roundLots.tar.gz`
+     - `caseStudy_short_oddLots.tar.gz`
+     - `caseStudy_short_roundLots.tar.gz`
 
-   Each of these files contains 264 or 265 data files. 132 of those are due to rebalances, the remaining are due to rollover dates. Since rebalances are always executed at the last trading day of the month, it should be straightforward to identify which files are due to rebalances and which are due to rollover.
+   Each of these files contains 264 or 265 data files. 132 of those are due to rebalances, the remaining are due to rollover dates. Since rebalances are always executed on the last trading day of the month, it should be straightforward to identify which files are due to rebalances and which are due to rollover.
 
- - Section 6.3, computational time. There are twenty zipped files, each one containing all data files for each of the 20 experiments reported in this section.
+ - Section 8.2, computational time. There are twenty zipped files, each one containing all data files for each of the 20 experiments reported in this section.
 
    Here, rollover was disabled, so there are 132 data files per experiment (one for each rebalance).
 
    There is also a subfolder called `outputFiles`, with 20 zipped files containing the solutions found in the second stage.
    
- - Section 6.6, case study of market neutral strategies, five zipped files:
-     - `section6.6_long.tar.gz`
-     - `section6.6_neutral1x.tar.gz`
-     - `section6.6_neutral2x.tar.gz`
-     - `section6.6_neutral3x.tar.gz`
-     - `section6.6_neutral4x.tar.gz`
+ - Section 8.4, case study of market neutral strategies, five zipped files:
+     - `marketNeutral_long.tar.gz`
+     - `marketNeutral_neutral1x.tar.gz`
+     - `marketNeutral_neutral2x.tar.gz`
+     - `marketNeutral_neutral3x.tar.gz`
+     - `marketNeutral_neutral4x.tar.gz`
 
    Each of these files contains 48 (long) or 64 (market neutral) data files since these experiments have been executed for a limited period (2020 to 2024). The long only experiments include only rebalances since they do not make use of futures contracts. The market neutral experiments have 16 extra rebalances due to rollover of the S&P500 futures.
 
-<b> Note that we did not include data for the experiments reported in Sections 6.4 and 6.5 </b>
+<b> Note that we did not include data for the experiments reported in Sections 4.1 and 8.3 </b>.
